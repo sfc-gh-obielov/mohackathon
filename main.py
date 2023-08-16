@@ -24,9 +24,9 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 # More icons can be found here: https://icons.getbootstrap.com
 
 apps = [
-    {"func":forecast.app, "title": "Weather forecast", "icon": "geo-alt"},
+    {"func":forecast.app, "title": "Weather forecast", "icon": "brightness-high-fill"},
     {"func":netcdf.app, "title": "NetCDF (Altitude)", "icon": "grid-3x2"},
-    {"func":precipitations.app, "title": "Precipitations", "icon": "grid-3x2"}
+    {"func":precipitations.app, "title": "Precipitations", "icon": "cloud-drizzle"}
 ]
 
 titles = [app["title"] for app in apps]
