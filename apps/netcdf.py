@@ -10,7 +10,7 @@ from streamlit_option_menu import option_menu
 
 def app():
     
-    st.title("Precipitations (Altitude)")
+    st.title("NetCDF (Altitude)")
     "## KeplerGL"
     map_style = eval(open("mapconfig_pre.json").read())
     sess = Session.builder.configs(st.secrets["geo-hackathon"]).create()
