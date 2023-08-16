@@ -16,7 +16,7 @@ from snowflake.snowpark import Session
 from snowflake.snowpark.functions import col
 import logging
 from streamlit_option_menu import option_menu
-from apps import forecast, netcdf # import your app modules here
+from apps import forecast, netcdf, precipitations # import your app modules here
 
 st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
@@ -25,7 +25,8 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
 apps = [
     {"func":forecast.app, "title": "Weather forecast", "icon": "geo-alt"},
-    {"func":netcdf.app, "title": "Precipitation", "icon": "grid-3x2"}
+    {"func":netcdf.app, "title": "NetCDF (Altitude)", "icon": "grid-3x2"},
+    {"func":precipitations.app, "title": "Precipitations", "icon": "grid-3x2"}
 ]
 
 titles = [app["title"] for app in apps]

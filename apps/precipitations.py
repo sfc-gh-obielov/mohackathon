@@ -10,13 +10,13 @@ from streamlit_option_menu import option_menu
 
 def app():
     
-    st.title("Precipitations (Altitude)")
+    st.title("Precipitation")
     "## KeplerGL"
-    map_style = eval(open("mapconfig_pre.json").read())
-    sess = Session.builder.configs(st.secrets["geo-hackathon"]).create()
+    map_style = eval(open("mapconfig.json").read())
+    sess = Session.builder.configs(st.secrets["geo-playground"]).create()
     #st.markdown("The color visualizes the average yearly precipitation (red: low precipitation, turquoise: high).", unsafe_allow_html=True)
     #st.markdown("The width of hexagons visualizes the population density. For more details click legend icon.", unsafe_allow_html=True)
-    spatialfeatures = sess.table('METOFFICE.HACKATHON.precipitation_accumulation_h3').select(col("altitude"),  col("GEOID"))
+    spatialfeatures = sess.table('spain_features').select(col("POPULATION"),col("year_prec"), col("summer_min"), col("summer_max"), col("GEOID"))
     logging.info('CUSTOM LOG: SnowPark DF is there')
     df = pd.DataFrame(spatialfeatures.collect())
     logging.info('CUSTOM LOG: Pandas df is there')
