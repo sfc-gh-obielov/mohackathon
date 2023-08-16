@@ -25,7 +25,7 @@ st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
 
 apps = [
     {"func":forecast.app, "title": "Weather forecast", "icon": "brightness-high-fill"},
-    {"func":netcdf.app, "title": "NetCDF (Altitude)", "icon": "grid-3x2"},
+    {"func":netcdf.app, "title": "NetCDF (Altitude)", "icon": "ladder"},
     {"func":precipitations.app, "title": "Precipitations", "icon": "cloud-drizzle"}
 ]
 
