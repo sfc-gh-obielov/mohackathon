@@ -1,0 +1,10 @@
+
+.DS_Store
+.streamlit/secrets.toml
+.ipynb_checkpoints/Visualize via folium-checkpoint.ipynb
+apps/__pycache__/so.cpython-38.pyc
+apps/__pycache__/netcdf.cpython-38.pyc
+apps/__pycache__/leafmap.cpython-38.pyc
+apps/__pycache__/grids.cpython-38.pyc
+apps/__pycache__/geometry.cpython-38.pyc
+apps/__pycache__/forecast.cpython-38.pyc
