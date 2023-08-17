@@ -14,7 +14,7 @@ def app():
     "## KeplerGL"
     map_style = eval(open("mapconfig_pre.json").read())
     sess = Session.builder.configs(st.secrets["geo-hackathon"]).create()
-    st.markdown("This vizualizstion uses XXX-precipitation_accumulation-PT01H.nc files.", unsafe_allow_html=True)
+    st.markdown("This vizualization uses XXX-precipitation_accumulation-PT01H.nc files.", unsafe_allow_html=True)
     #st.markdown("The width of hexagons visualizes the population density. For more details click legend icon.", unsafe_allow_html=True)
     spatialfeatures = sess.table('METOFFICE.HACKATHON.precipitation_accumulation_h3').select(col("altitude"),  col("GEOID"))
     logging.info('CUSTOM LOG: SnowPark DF is there')
